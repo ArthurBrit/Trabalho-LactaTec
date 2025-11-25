@@ -15,6 +15,7 @@ UNIBRAS - União Brasileira de Desenvolvimento Social
 👥 Equipe de Autores e Participantes
 
 👥 Alunos
+
 [Arthur Brito]
 
 [Luiz Henrique M. Barbosa]
@@ -24,7 +25,6 @@ UNIBRAS - União Brasileira de Desenvolvimento Social
 [Fellipe Augusto]
 
 [Marcelo]
-
 [vitor]
 ------
 ### 👔 Docentes e Orientação
