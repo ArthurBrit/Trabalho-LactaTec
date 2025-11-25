@@ -9,8 +9,11 @@ UNIBRAS - Modelo de Documento para Projetos, Pesquisas e Disciplinas Específica
 UNIBRAS - União Brasileira de Desenvolvimento Social
 
 📌 Título do Projeto
+
 🏭🥛 Lactec
+
 👥 Equipe de Autores e Participantes
+
 👥 Alunos
 [Luiz Henrique M. Barbosa]
 [Arthur Brito]
@@ -18,9 +21,11 @@ UNIBRAS - União Brasileira de Desenvolvimento Social
 [Fellipe Augusto]
 [Marcelo]
 [vitor]
+
 👔 Docentes e Orientação
 Orientador(a): FRANCISMAR ALVES MARTINS JUNIOR
 Coordenador(a): Guilherme Nogueira
+
 📝 Resumo
 Este trabalho foi feito com o intuito de solucionar o problema de uma empresa láctea, relacionado à temperatura do leite, desde o momento da retirada do produto até a chegada nos comércios.
 
@@ -28,11 +33,14 @@ Este trabalho foi feito com o intuito de solucionar o problema de uma empresa l�
 Uma empresa da área de laticínios veio até nós com o intuito de solucionar seu problema.
 O problema em questão é a falta de monitoramento da temperatura do leite.
 O objetivo é construir um sensor térmico para monitorar essa temperatura.
+
 🏁 Conclusões e Trabalhos Futuros
 O resultado final foi a conclusão do projeto, no qual são emitidos alertas sonoros e visuais quando a temperatura chega aos extremos.
+
 📄 Identificação
 Disciplina: Arquitetura e Organização de Computadores
 Professor(a): FRANCISMAR ALVES MARTINS JUNIOR
+
 🛠️ Estrutura do Repositório
 templatesUNIBRAS/
 ├─ assets/
@@ -49,12 +57,14 @@ link do wokwi
 (https://wokwi.com/projects/448507547055723521)
 
 📷 Evidências Visuais
-Exemplo de Resultado Final
+  Exemplo de Resultado Final
+ <img src="src/wokwi.png" alt="imagem wokwi" width="450">
 
 ⚡️ Critérios de Avaliação (Ex. Disciplinas Específicas)
-Qualidade e clareza do código-fonte.
-Adequação às normas e padrões de projeto.
-Resultado final (usabilidade e eficiência técnica).
+  Qualidade e clareza do código-fonte.
+  Adequação às normas e padrões de projeto.
+  Resultado final (usabilidade e eficiência técnica).
+
 📋 Licença e Atribuições
 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
