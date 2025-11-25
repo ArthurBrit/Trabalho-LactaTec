@@ -16,14 +16,20 @@ UNIBRAS - União Brasileira de Desenvolvimento Social
 
 👥 Alunos
 [Arthur Brito]
+
 [Luiz Henrique M. Barbosa]
+
 [Haynan Jacob]
+
 [Fellipe Augusto]
+
 [Marcelo]
+
 [vitor]
 ------
 ### 👔 Docentes e Orientação
 Orientador(a): FRANCISMAR ALVES MARTINS JUNIOR
+
 Coordenador(a): Guilherme Nogueira
 ------
 ### 📝 Resumo
