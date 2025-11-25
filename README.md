@@ -42,9 +42,9 @@ Coordenador(a): Guilherme Nogueira
 >Este trabalho foi feito com o intuito de solucionar o problema de uma empresa láctea, relacionado à temperatura do leite, desde o momento da retirada do produto até a chegada nos comércios.
 ------
 ### 🕹️ Introdução
-~Uma empresa da área de laticínios veio até nós com o intuito de solucionar seu problema.
+;Uma empresa da área de laticínios veio até nós com o intuito de solucionar seu problema.
 O problema em questão é a falta de monitoramento da temperatura do leite.
-O objetivo é construir um sensor térmico para monitorar essa temperatura.~
+O objetivo é construir um sensor térmico para monitorar essa temperatura.;
 ------
 ### 🏁 Conclusões e Trabalhos Futuros
 >O resultado final foi a conclusão do projeto, no qual são emitidos alertas sonoros e visuais quando a temperatura chega aos extremos.
