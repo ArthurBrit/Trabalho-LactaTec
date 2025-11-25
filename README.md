@@ -53,7 +53,8 @@ templatesUNIBRAS/
 ├─ .gitignore
 ├─ LICENSE
 ├─ README.md
-link do wokwi
+
+👌link do wokwi
 (https://wokwi.com/projects/448507547055723521)
 
 📷 Evidências Visuais
