@@ -54,12 +54,14 @@ templatesUNIBRAS/
 ├─ LICENSE
 ├─ README.md
 
+Exemplo de Resultado Final
 👌link do wokwi
 (https://wokwi.com/projects/448507547055723521)
 
-📷 Evidências Visuais
-  Exemplo de Resultado Final
- <img src="src/wokwi.png" alt="imagem wokwi" width="450">
+
+      📷 Evidências Visuais
+
+ <img src="src/wokwi.png" alt="imagem wokwi" >
 
 ⚡️ Critérios de Avaliação (Ex. Disciplinas Específicas)
   Qualidade e clareza do código-fonte.
