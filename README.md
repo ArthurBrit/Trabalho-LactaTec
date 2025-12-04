@@ -82,6 +82,148 @@ Exemplo de Resultado Final
 
  <img src="src/wokwi.png" alt="imagem wokwi" >
 
+``` #include <WiFi.h>
+#include <HTTPClient.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+// Pinos
+int led = 2;
+int buzzer = 4;
+
+// Wi-Fi do Wokwi
+const char* ssid = "Wokwi-GUEST";
+const char* password = "";
+
+// URL de teste (você pode trocar por sua API)
+String URL_POST = "https://httpbin.org/post";
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(led, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+
+  // ---- Inicializa OLED ----
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println("Erro ao iniciar OLED");
+    while (true);
+  }
+
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 0);
+  display.println("Iniciando...");
+  display.display();
+
+  // ---- Conecta ao Wi-Fi ----
+  Serial.println("Conectando ao WiFi...");
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(300);
+    Serial.print(".");
+  }
+
+  Serial.println("\nWiFi conectado!");
+  delay(500);
+
+  randomSeed(analogRead(0));
+}
+
+void enviarPost(int temperatura, String status) {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+    http.begin(URL_POST);
+    http.addHeader("Content-Type", "application/json");
+
+    // JSON enviado
+    String json = "{\"temperatura\": " + String(temperatura) +
+                  ", \"status\": \"" + status + "\"}";
+
+    Serial.println("Enviando POST:");
+    Serial.println(json);
+
+    int httpCode = http.POST(json);
+
+    if (httpCode > 0) {
+      Serial.print("Resposta servidor: ");
+      Serial.println(httpCode);
+      Serial.println(http.getString());
+    } else {
+      Serial.print("Erro no POST: ");
+      Serial.println(httpCode);
+    }
+
+    http.end();
+  } else {
+    Serial.println("WiFi desconectado, não enviou POST.");
+  }
+}
+
+void loop() {
+  // ---- TEMPERATURA ----
+  int temp = random(20, 61);
+
+  Serial.print("Temperatura atual: ");
+  Serial.print(temp);
+  Serial.println(" °C");
+
+  // ---- Atualiza OLED ----
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setCursor(0, 0);
+  display.print("Temp:");
+  display.print(temp);
+  display.println("C");
+
+  String status = "";
+
+  // ---- LÓGICA DO SISTEMA ----
+  if (temp > 40) {
+    digitalWrite(led, HIGH);
+    noTone(buzzer);
+    status = "Muito quente";
+
+    display.setTextSize(1);
+    display.setCursor(0, 40);
+    display.println("ALERTA: QUENTE!");
+  }
+  else if (temp < 30) {
+    digitalWrite(led, LOW);
+    tone(buzzer, 1000);
+    status = "Muito frio";
+
+    display.setTextSize(1);
+    display.setCursor(0, 40);
+    display.println("ALERTA: FRIO!");
+  }
+  else {
+    digitalWrite(led, LOW);
+    noTone(buzzer);
+    status = "Temperatura ideal";
+
+    display.setTextSize(1);
+    display.setCursor(0, 40);
+    display.println("Ideal");
+  }
+
+  display.display();
+
+  // ---- Envia POST ----
+  enviarPost(temp, status);
+
+  delay(2000);
+}
+```
+
+----
 ⚡️ Critérios de Avaliação (Ex. Disciplinas Específicas)
   Qualidade e clareza do código-fonte.
   Adequação às normas e padrões de projeto.
