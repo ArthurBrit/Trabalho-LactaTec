@@ -82,6 +82,8 @@ Exemplo de Resultado Final
 
  <img src="src/wokwi.png" alt="imagem wokwi" >
 
+Codigo Utilizado:
+
 ``` #include <WiFi.h>
 #include <HTTPClient.h>
 #include <Wire.h>
